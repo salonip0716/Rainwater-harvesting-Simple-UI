@@ -1,0 +1,247 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f9fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+.top-bar {
+  background-color: #ffffff;
+  color: #006699;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0, 102, 153, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #006699;
+}
+
+.login-area {
+  display: flex;
+  gap: 10px;
+}
+
+.login-area button {
+  background-color: #006699;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-area button:hover {
+  background-color: #004d66;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #e6f2f8;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 20px;
+  transition: transform 0.3s ease;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #005577;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: #0099cc;
+}
+
+
+.specific {
+  margin-left: 220px;
+  background: linear-gradient(to right, #cceeff, #e6faff);
+  padding: 60px 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.specific-text h1 {
+  font-size: 2.5em;
+  color: #00334d;
+}
+
+.specific-text p {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #004d66;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #0099cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0077aa;
+}
+
+/* Main Content */
+main {
+  margin-left: 220px;
+  padding: 40px 30px;
+}
+
+.intro, .why, .features {
+  margin-bottom: 40px;
+   flex: 1;
+}
+
+
+.intro-img { 
+      max-width: 300px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+
+.intro h2, .why h2, .features h2 {
+  color: #00334d;
+  margin-bottom: 15px;
+  text-align: center;
+  
+}
+
+.feature-box {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #cce0e8;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  flex: 1;
+  min-width: 180px;
+  transition: transform 0.3s ease;
+  text-align: center;
+  font-weight: 500;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  background-color: #f0fbff;
+}
+
+/* Chatbot */
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ffffff;
+  border: 1px solid #cce0e8;
+  border-radius: 10px;
+  padding: 10px 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 250px;
+  transition: all 0.3s ease;
+}
+
+.chatbot-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.chatbox {
+  font-size: 0.9em;
+  color: #004466;
+}
+
+/* Footer */
+footer {
+  margin-left: 220px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f0f8fb;
+  color: #006699;
+  border-top: 1px solid #cce0e8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-wrap: wrap;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    position: fixed;
+    top: 60px;
+    height: 100%;
+    z-index: 100;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .menu-icon {
+    display: block;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+
+  main, .hero, footer {
+    margin-left: 0;
+  }
+
+  .feature-box {
+    flex-direction: column;
+  }
+
+  .chatbot {
+    max-width: 90%;
+    bottom: 10px;
+    right: 5%;
+  }
+}
